@@ -68,7 +68,7 @@ def main():
 
 def retirementCalculator(savingsAmount, interestRate, compoundPeriod, workingYears):
 	"""Given the current savings (in $), interest (in %) and number of years, this function will
-	calculate the amount of savings as a float value, then proceed to return it"""
+	calculate the amount of savings as a float value, then proceed to return it."""
 	#Compound Interest is divided by 100 to convert the % into a decimal
 	retirementCalculation = savingsAmount * (1 + (interestRate / 100) / compoundPeriod) ** (compoundPeriod * workingYears)
 	if savingsAmount <= MIN_TOTAL_MONEY_1:
