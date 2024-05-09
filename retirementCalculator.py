@@ -1,6 +1,8 @@
-"""Name: Matthew Moga
-   Date: Mar 5, 2024
-   Description: Calculate the amount of savings a user will have based on the following input parameters:
+"""
+Module name: retirementCalculator.py
+Author: Matthew Moga
+Date: December 28, 2023
+Description: Calculate the amount of savings a user will have based on the following input parameters:
    - Current savings (in dollars)
    - Interest offered by the bank (will compound with number or years)
    - Number of years user will continue working
@@ -13,12 +15,15 @@ MAX_WORKING_YEARS = 60
 MIN_TOTAL_MONEY_1 = 1000
 MIN_TOTAL_MONEY_2 = 100000
 
+
 def main():
-	"""This function defines the mainline logic for our program"""
+	"""
+	This function defines the mainline logic for our program.
+	"""
 	while True:
 		try:
 			savingsAmount = float(input("The amount of savings you possess is $"))
-      #Will check if initial amount is zero or less, savings should be greater than 0
+            #Will check if initial amount is zero or less, savings should be greater than 0
 			if savingsAmount < 0:
 				print("Hold up! I asked for savings, not debt!")
 			elif savingsAmount == 0:
@@ -67,8 +72,19 @@ def main():
 
 
 def retirementCalculator(savingsAmount, interestRate, compoundPeriod, workingYears):
-	"""Given the current savings (in $), interest (in %) and number of years, this function will
-	calculate the amount of savings as a float value, then proceed to return it."""
+	"""
+	Given the current savings (in $), interest (in %) and number of years, this function will
+	calculate the amount of savings as a float value, then proceed to return it.
+
+	Args:
+		savingsAmount (float): Current savings.
+		interestRate (float): Interest offered by the bank.
+		compoundPeriod (float):Intervals of time when interest is added to account.
+		workingYears (float): Number of years user will continue working.
+	
+	Returns:
+		float: Calculation of amount (in dollars) compounded based on user inputs.
+	"""
 	#Compound Interest is divided by 100 to convert the % into a decimal
 	retirementCalculation = savingsAmount * (1 + (interestRate / 100) / compoundPeriod) ** (compoundPeriod * workingYears)
 	if savingsAmount <= MIN_TOTAL_MONEY_1:
@@ -79,8 +95,14 @@ def retirementCalculator(savingsAmount, interestRate, compoundPeriod, workingYea
 
 
 def displayResult(totalMoney, workingYears):
-	"""Given a float savings value after a certain period of time, this function will
-	round it to 2 decimal places and display the result"""
+	"""
+	Given a float savings value after a certain period of time, this function will
+	round it to 2 decimal places and display the result.
+
+	Args:
+		totalMoney (float): Retirement calculation amount rounded to 2 decimal places.
+		workingYears (float): Number of years you will continue working.
+	"""
 	totalMoney = round(totalMoney, 2)
 	print("The amount of savings you will have after " + str(int(workingYears)) + " years = $" + str(totalMoney))
 
