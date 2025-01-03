@@ -153,9 +153,9 @@ def retirementCalculator(savingsAmount, interestRate, compoundPeriod, workingYea
 	"""
 	#Compound Interest is divided by 100 to convert the % into a decimal
 	retirementCalculation = savingsAmount * (1 + (interestRate / 100) / compoundPeriod) ** (compoundPeriod * workingYears)
-	if savingsAmount <= MIN_TOTAL_MONEY_1:
+	if retirementCalculation <= MIN_TOTAL_MONEY_1:
 		print("Ouch, it looks like you have to work until you are at least 80!")
-	elif savingsAmount >= MIN_TOTAL_MONEY_2:
+	elif retirementCalculation >= MIN_TOTAL_MONEY_2:
 		print("Retirement is in reach for you!")
 	return retirementCalculation
 ```
