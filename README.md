@@ -119,14 +119,43 @@ def main():
 
 ```python
 def retirementCalculator(savingsAmount, interestRate, compoundPeriod, workingYears):
-    # Calculates the amount of savings based on user inputs
+	"""
+	Given the current savings (in $), interest (in %) and number of years, this function will
+	calculate the amount of savings as a float value, then proceed to return it.
+
+	Args:
+		savingsAmount (float): Current savings.
+		interestRate (float): Interest offered by the bank.
+		compoundPeriod (float):Intervals of time when interest is added to account.
+		workingYears (float): Number of years user will continue working.
+	
+	Returns:
+		float: Calculation of amount (in dollars) compounded based on user inputs.
+	"""
+	#Compound Interest is divided by 100 to convert the % into a decimal
+	retirementCalculation = savingsAmount * (1 + (interestRate / 100) / compoundPeriod) ** (compoundPeriod * workingYears)
+	if savingsAmount <= MIN_TOTAL_MONEY_1:
+		print("Ouch, it looks like you have to work until you are at least 80!")
+	elif savingsAmount >= MIN_TOTAL_MONEY_2:
+		print("Retirement is in reach for you!")
+	return retirementCalculation
 ```
 
 ### Display Result Function
 
 ```python
 def displayResult(totalMoney, workingYears):
-    # Rounds and displays the result
+	"""
+	Given a float savings value after a certain period of time, this function will
+	round it to 2 decimal places and display the result.
+
+	Args:
+		totalMoney (float): Retirement calculation amount rounded to 2 decimal places.
+		workingYears (float): Number of years you will continue working.
+	"""
+	totalMoney = round(totalMoney, 2)
+	print("The amount of savings you will have after " + str(int(workingYears)) + " years = $" + str(totalMoney))
+
 ```
 
 
