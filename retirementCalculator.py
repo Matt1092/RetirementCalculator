@@ -4,7 +4,7 @@ Author: Matthew Moga
 Date: December 28, 2023
 Description: Calculate the amount of savings a user will have based on the following input parameters:
    - Current savings (in dollars)
-   - Interest offered by the bank (will compound with number or years)
+   - Interest offered by the bank (will compound with number of years)
    - Number of years user will continue working
 """
 
