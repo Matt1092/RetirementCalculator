@@ -62,6 +62,55 @@ The amount of savings you will have after 20 years = $13593.95
 ```python
 def main():
     # Mainline logic for the program
+    while True:
+		try:
+			savingsAmount = float(input("The amount of savings you possess is $"))
+            #Will check if initial amount is zero or less, savings should be greater than 0
+			if savingsAmount < 0:
+				print("Hold up! I asked for savings, not debt!")
+			elif savingsAmount == 0:
+				print("Hold up! You should have at least a dollar in savings!")		
+			else:
+				break
+		except ValueError:
+			print("Input must be an integer or decimal value")
+			
+	while True:
+		try:
+			interestRate = float(input("The bank interest rate in % is "))
+			if interestRate < 0:
+				print("Interest rate must be positive")
+			else:
+				break
+		except ValueError:
+			print("Input must be an integer or decimal value")
+			
+	while True:
+		try:
+			compoundPeriod = float(input("The number of monthly compounding periods per year is "))
+			#Period should be a number of months less than a full year (12), something like 3/4/6
+			if compoundPeriod > MAX_COMPOUND_PERIOD:
+				print("Woah, you can only have a number up to " + str(int(MAX_COMPOUND_PERIOD)) + " months annually!")
+			elif compoundPeriod < 0:
+				print("Compounding period must be a positive value in the range of 0 to 12 (inclusive)")
+			else:
+				break	
+		except ValueError:
+			print("Input must be an integer or decimal value")
+			
+	while True:
+		try:
+			workingYears = float(input("The number of years you plan to continue working is "))
+			#Life expectancy is around 80 years so no one should plan to work more than 60 years
+			if workingYears > MAX_WORKING_YEARS:
+				print("This will only work if you are an actor or the US president! No one else should work until that age :)")
+			else:
+				break
+		except ValueError:
+			print("Input must be an integer or decimal value")
+
+	totalMoney = retirementCalculator(savingsAmount, interestRate, compoundPeriod, workingYears)
+	displayResult(totalMoney, workingYears)
 ```
 
 ### Retirement Calculator Function
