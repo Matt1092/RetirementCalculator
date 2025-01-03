@@ -46,7 +46,7 @@ This Python program calculates the amount of savings a user will have at the tim
 ## Example
 
 Here is an example interaction with the program:
-```.txt
+```text
 The amount of savings you possess is $5000
 The bank interest rate in % is 5
 The number of monthly compounding periods per year is 12
