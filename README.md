@@ -52,8 +52,15 @@ The bank interest rate in % is 5
 The number of monthly compounding periods per year is 12
 The number of years you plan to continue working is 20
 The amount of savings you will have after 20 years = $13563.2
+```
 
-fart
+```text
+The amount of savings you possess is $50000
+The bank interest rate in % is 3
+The number of monthly compounding periods per year is 6
+The number of years you plan to continue working is 25
+Retirement is in reach for you!
+The amount of savings you will have after 20 years = $105652.38
 ```
 
 ## Code Overview
