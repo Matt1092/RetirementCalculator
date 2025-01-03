@@ -23,7 +23,7 @@ def main():
 	while True:
 		try:
 			savingsAmount = float(input("The amount of savings you possess is $"))
-            #Will check if initial amount is zero or less, savings should be greater than 0
+            		#Will check if initial amount is zero or less, savings should be greater than 0
 			if savingsAmount < 0:
 				print("Hold up! I asked for savings, not debt!")
 			elif savingsAmount == 0:
