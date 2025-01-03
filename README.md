@@ -63,6 +63,17 @@ Retirement is in reach for you!
 The amount of savings you will have after 20 years = $105652.38
 ```
 
+```text
+The amount of savings you possess is $10
+The bank interest rate in % is 5
+The number of monthly compounding periods per year is 12
+The number of years you plan to continue working is 75
+This will only work if you are an actor or the US president! No one else should work until that age :)
+The number of years you plan to continue working is 30
+Ouch, it looks like you have to work until you are at least 80!
+The amount of savings you will have after 30 years = $44.68
+```
+
 ## Code Overview
 
 ### Main Function
