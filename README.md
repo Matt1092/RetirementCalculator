@@ -61,11 +61,13 @@ The amount of savings you will have after 20 years = $13593.95
 
 ```python
 def main():
-    # Mainline logic for the program
-    while True:
+	"""
+	This function defines the mainline logic for our program.
+	"""
+	while True:
 		try:
 			savingsAmount = float(input("The amount of savings you possess is $"))
-            #Will check if initial amount is zero or less, savings should be greater than 0
+            		#Will check if initial amount is zero or less, savings should be greater than 0
 			if savingsAmount < 0:
 				print("Hold up! I asked for savings, not debt!")
 			elif savingsAmount == 0:
