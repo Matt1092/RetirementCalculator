@@ -45,14 +45,15 @@ This Python program calculates the amount of savings a user will have at the tim
 
 ## Example
 
-Here is an example interaction with the program:
+Here are example interactions with the program:
 ```text
 The amount of savings you possess is $5000
 The bank interest rate in % is 5
 The number of monthly compounding periods per year is 12
 The number of years you plan to continue working is 20
-Retirement is in reach for you!
-The amount of savings you will have after 20 years = $13593.95
+The amount of savings you will have after 20 years = $13563.2
+
+fart
 ```
 
 ## Code Overview
